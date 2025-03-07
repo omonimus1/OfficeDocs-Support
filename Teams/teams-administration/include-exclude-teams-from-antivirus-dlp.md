@@ -66,8 +66,9 @@ Alternatively, you can add the processes to the allowlist for programs in your D
 
 
 ## DLLs / tools which may cause the above described issues
-- Umppc*.dll: Crowdstrike,
-- Beyond Trust, Avecto, PGHook.dll
+- Crowdstrike (Umppc*.dll)
+- Beyond Trust
+- Avecto
 - Aternity
 - zscaler
 - ControlUp
@@ -75,6 +76,7 @@ Alternatively, you can add the processes to the allowlist for programs in your D
 - McAfee
 - Trellix [Verify to use Drive Encryption 7.4.2, to improve your experience on teams](https://docs.trellix.com/bundle/drive-encryption-v7-4-x-hotfix7421-release-notes/resource/prod-drive-encryption-v7-4-x-cat-release-notes.pdf)
 - NahimicOSD
+- PGHook.dll
 - sysfer.dll – Symantec Endpoint Protection
 - PSDPUIHandler.dll (Konica Minolta copier Explorer plugin interferes with files upload to the app)
 - ghijt64**.dll – Qianxin Tianqing HookBase
