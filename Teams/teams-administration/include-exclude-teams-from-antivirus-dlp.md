@@ -75,12 +75,13 @@ Alternatively, you can add the processes to the allowlist for programs in your D
 - McAfee
 - Trellix [Verify to use Drive Encryption 7.4.2, to improve your experience on teams](https://docs.trellix.com/bundle/drive-encryption-v7-4-x-hotfix7421-release-notes/resource/prod-drive-encryption-v7-4-x-cat-release-notes.pdf)
 - NahimicOSD
+- sysfer.dll – Symantec Endpoint Protection
 - PSDPUIHandler.dll (Konica Minolta copier Explorer plugin interferes with files upload to the app)
 - ghijt64**.dll – Qianxin Tianqing HookBase
 - dragdrophookdll**.dll – ManageEngine UEMS Agent
 - skgsec64.dll – Max Software Keylogger
 - nlutmgrhook_x64.dll – Nuance NaturallySpeaking
-- sysfer.dll – Symantec Endpoint Protection
+
 - sgephook.dll – SkyGuard Endpoint Security
 - CLSCBase.dll, CLSUInject.dll – DataClasys User Client
 - ctxdodhook64.dll – Citrix ICA Service
