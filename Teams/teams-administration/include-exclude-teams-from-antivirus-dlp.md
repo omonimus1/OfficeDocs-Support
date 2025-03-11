@@ -94,7 +94,7 @@ The following table lists applications and their associated DLLs that are known 
 | Manufacturer Endpoint Agent| `clpbm64.dll`, `prntm64.dll`|
 | Max Software Keylogger| `skgsec64.dll`|
 | McAfee||
-| Nahimic| `NahimicOSD.dll`, `Nahimic2OSD.dll`, `AudioDevProps2.dll`, `NahimicVRDevProps.dll`|
+| Nahimic| `NahimicOSD.dll`, `Nahimic2OSD.dll`, `AudioDevProps2.dll`, `NahimicVRDevProps.dll`<br/><br/> [Modify the Nahimic exclusion list](../meetings/new-teams-desktop-app-fail-render-video.md#workaround)|
 | NetRatings NetSight| `n64hooks.dll`|
 | Netrix Agent| `nxgrdh64.dll`, `nxipc64.dll`|
 | Nuance NaturallySpeaking| `nlutmgrhook_x64.dll`|
@@ -106,7 +106,7 @@ The following table lists applications and their associated DLLs that are known 
 | QiAnXin Tianqing Watermark| `watermarkhook64.dll`|
 | Quality ISMC Client| `ismcfilehook64.dll`|
 | SkyGuard Endpoint Security| `sgephook.dll`|
-| Symantec Endpoint Protection| `sysfer.dll`|
+| Symantec Endpoint Protection (SEP) | `sysfer.dll`<br/><br/> [Create an Application Control exception in SEP](https://knowledge.broadcom.com/external/article/181736/how-to-create-an-application-control-exc.html)|
 | Thycotic Application Control| `ArelliaACActioni64.dll`|
 | TightVNC| `screenhooks64.dll`| 
 | Trellix Drive Encryption||
