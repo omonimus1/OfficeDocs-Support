@@ -113,7 +113,7 @@ The following table lists applications and their associated DLLs that are known 
 | Zscaler||
 | Ztsment Data Protection| `injumon64.dll`|
 
-## Other DLLs that impacts the Teams desktop client and Edge WebView2
+## Other DLLs that may impact the Teams desktop client and Edge WebView2
 
 Addtionally, the following DLLs are known to impact the Teams desktop client and Edge WebView2. You should verify the presence of the DLLs, and verify ownership and integrity.
 
