@@ -16,33 +16,33 @@ ms.custom:
   - CI 106370
   - CSSTroubleshoot
 ms.reviewer: davidsle
-description: Provides instructions to prevent antivirus and DLP applications from blocking or crashing the Microsoft Teams app.
+description: Provides instructions to prevent antivirus and DLP applications from blocking the Microsoft Teams app or causing the app to fail.
 ---
 
-# Prevent antivirus and DLP tools from blocking or crashing Microsoft Teams
+# Prevent antivirus and DLP tools from causing Microsoft Teams app to stop or fail
 
-Third-party antivirus, reliability monitoring and data loss prevention (DLP) applications can interfere with the Microsoft Teams app and [Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/?form=MA13LH), causing the app to exit unexpectedly and Teams client performance degradation. When you use non-Microsoft antivirus or DLP applications on desktops, you can include or approve the use of the Teams app, the executable that automatically updates the Teams app, and Edge Webview2 to improve application stability and efficency.
+Third-party applications for antivirus, reliability monitoring, and data loss prevention (DLP) can interfere with the Microsoft Teams app and [Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/?form=MA13LH). These tools can degrade Teams client performance and also cause the app to exit unexpectedly. To improve application stability and efficency when you use non-Microsoft antivirus or DLP applications on desktops, you can include or approve the use of the Teams app, the executable that automatically updates the Teams app, and Edge Webview2.
 
 ## New Teams
 
-To prevent issues starting or using the new Teams app, add all of the following processes to the exclusion list in the antivirus software that you're using:
+To prevent issues from occurring when you start or use the new Teams app, add all the following processes to the exclusion list in the antivirus software that you use:
 
 - `msedgewebview2.exe`
 - `ms-teams.exe`
 - `ms-teamsupdate.exe`
 - `ms-teams_autostarter.exe`
 
-Alternatively, you can add the processes to the allowlist for programs in your DLP application. The method to accomplish this addition varies. For specific instructions, contact your DLP application's manufacturer.
+Alternatively, you can add the processes to the allowlist for programs in your DLP application. The method to accomplish this addition varies. For specific instructions, contact your DLP application manufacturer.
 
-The MSIX installer installs the new Teams app in the `WindowsApps` folder instead of the user profile folder, where the classic Teams app is installed. Because users can't write to the `WindowsApps` folder, this location adds better protection against attacks that try to alter the installation of the Teams app.
+The MSIX installer installs the new Teams app in the `WindowsApps` folder instead of the user profile folder in which the classic Teams app is installed. Because users can't write to the `WindowsApps` folder, this location adds better protection against attacks that are intended to alter the installation of the Teams app.
 
-**Note**: The MSIX installer and all files in the same directory are signed with a Microsoft certificate.
+**Note**: The MSIX installer and all files in the same directory are signed by using a Microsoft certificate.
 
-The name of the folder where the new Teams app is installed is dynamic and it changes when the app's version is updated. The folder name begins with `MSTeams_`, ends with `_8wekyb3d8bbwe`, and includes the app's version number in between.  For example, `MSTeams_23247.1112.2396.409_x64_8wekyb3d8bbwe`.
+The name of the folder in which the new Teams app is installed is dynamic and it changes when the app version is updated. The folder name begins in `MSTeams_`, ends in `_8wekyb3d8bbwe`, and includes the app's version number in between. For example, `MSTeams_23247.1112.2396.409_x64_8wekyb3d8bbwe`.
 
 ### Location of the Teams installation folder
 
-To add the Teams processes to either the exclusion list or the Safe list/Allow list, you can find their location by using the following steps:
+To add the Teams processes to either the block list or the allow list, you can find their location by using the following steps:
 
 1. Open Windows PowerShell and run the following cmdlet to determine the location of the installation files:
 
@@ -50,13 +50,13 @@ To add the Teams processes to either the exclusion list or the Safe list/Allow l
    Get-AppPackage -name "msteams"
    ```
 
-   The result includes the value of the **InstallLocation** parameter, such as `C:\Program Files\WindowsApps\MSTeams_23247.1112.2396.409_x64_8wekyb3d8bbwe`.
-1. To view the individual files, open **Task Manager** and select **Details**.
-1. On the **Details** tab, locate and right-click **ms-teams.exe** and select **Open file location**.
+   The results includes the value of the **InstallLocation** parameter, such as `C:\Program Files\WindowsApps\MSTeams_23247.1112.2396.409_x64_8wekyb3d8bbwe`.
+1. To view the individual files, open **Task Manager**, and select **Details**.
+1. On the **Details** tab, locate and right-click **ms-teams.exe**, and then select **Open file location**.
 
 ## Classic Teams
 
-To prevent issues starting the classic Teams app, add the following processes to the exclusion list in the antivirus software that you're using:
+To prevent issues from starting the classic Teams app, add the following processes to the exclusion list in the antivirus software that you're using:
 
 - `C:\Users\*\AppData\Local\Microsoft\Teams\current\teams.exe`
 - `C:\Users\*\AppData\Local\Microsoft\Teams\update.exe`
@@ -65,9 +65,9 @@ To prevent issues starting the classic Teams app, add the following processes to
 
 Alternatively, you can add the processes to the allowlist for programs in your DLP application. The method to accomplish this addition varies. For specific instructions, contact your DLP application's manufacturer.
 
-## Applications that may block or crash Teams
+## Applications that might block Teams or cause it to fail
 
-The following table lists applications and their associated DLLs that are known to potentially block or cause Teams to crash.
+The following table lists applications and their associated DLLs that are known to potentially block or cause Teams to stop responding.
 
 | Application | Associated DLLs |
 | --- | --- |
@@ -113,9 +113,9 @@ The following table lists applications and their associated DLLs that are known 
 | Zscaler||
 | Ztsment Data Protection| `injumon64.dll`|
 
-## Other DLLs that may impact the Teams desktop client and Edge WebView2
+## Other DLLs that might affect Teams desktop client and Edge WebView2
 
-Addtionally, the following DLLs are known to impact the Teams desktop client and Edge WebView2. You should verify the presence of the DLLs, and verify ownership and integrity.
+The following DLLs are known to affect the Teams desktop client and Edge WebView2. You should verify the presence of the DLLs, and also verify the ownership and integrity of the DLLs.
 
 - `bsijt64.dll`
 - `core64.dll`
@@ -159,6 +159,7 @@ Addtionally, the following DLLs are known to impact the Teams desktop client and
 - `xpspntdll64_6016.dll`  
   
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-information-disclaimer.md)]
+
 [!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
 
 **Third-party information and solution disclaimer**
